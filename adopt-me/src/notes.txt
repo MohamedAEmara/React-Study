@@ -1,0 +1,2 @@
+One-way data flow:
+    The means you can pass data from a parent to its children but NOT vice versa
