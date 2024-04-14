@@ -1,2 +1,6 @@
 One-way data flow:
     The means you can pass data from a parent to its children but NOT vice versa
+
+npm run lint -- --fix   
+    // This fixes problem if there're some quick fixes for the problems.
+
