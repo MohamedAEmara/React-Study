@@ -1,16 +1,15 @@
 // import React from 'react';
-import { createRoot } from 'react-dom';
-import Pet from './Pet';
+import { createRoot } from 'react-dom/client';
+// import Pet from './Pet';
+import SearchParams from './SearchParams';
 
 const App = () => {
-  <div id="my-id">
-    <h1>
-      <Pet name="Luna" animal="Dog" breed="Havanese" />
-      <Pet name="Pepper" animal="Bird" breed="Cockatiel" />
-      <Pet name="Doink" animal="Cat" breed="Mixed" />
-    </h1>
-    
-  </div>
+  return (
+    <div id="my-id">
+      <h1>Adopt Me!</h1>
+      <SearchParams />
+    </div>
+  );
   // return React.createElement(
   //   'div', // Element type
   //   { id: 'my-id' }, // Attributes of the element like id, class,
