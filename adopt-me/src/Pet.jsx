@@ -1,4 +1,3 @@
-
 // const Pet = (props) => {
 //     return React.createElement(
 //       'div',
@@ -13,14 +12,14 @@
 
 // We'll use HTML directly...
 const Pet = (props) => {
-    return (
-        <div>
-            <h1>{props.name}</h1>
-            <h2>{props.animal}</h2>
-            <h3>{props.breed}</h3>
-        </div>
-    )
-}
+  return (
+    <div>
+      <h1>{props.name}</h1>
+      <h2>{props.animal}</h2>
+      <h3>{props.breed}</h3>
+    </div>
+  );
+};
 // It's easier to read the second one..
 
 export default Pet;
