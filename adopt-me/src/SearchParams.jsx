@@ -1,6 +1,6 @@
 import { useState, useEffect } from 'react';
-import Pet from './Pet';
 import useBreedList from './useBreedList';
+import Results from './Results';
 const ANIMALS = ['bird', 'cat', 'dog', 'rabbit', 'reptile'];
 
 let cnt = 0;
@@ -10,7 +10,7 @@ const SearchParams = () => {
   const [animal, setAnimal] = useState('');
   const [breed, setBreed] = useState('');
   const [pets, setPets] = useState([]); // Empty array that we'll retrieve later from the API
-  const [breeds] = useBreedList(animal);  // Now, breeds will be added based on the choice of the animal
+  const [breeds] = useBreedList(animal); // Now, breeds will be added based on the choice of the animal
 
   // NOTE: by default, "useEffect" renders everytime a change happens
   //    but we don't it to act this way.
@@ -90,14 +90,7 @@ const SearchParams = () => {
         </label>
         <button>Submit</button>
       </form>
-      {pets.map((pet) => {
-        <Pet
-          name={pet.name}
-          animal={pet.animal}
-          breed={pet.breed}
-          key={pet.id}
-        />;
-      })}
+      <Results pets={pets} />
     </div>
   );
 };
